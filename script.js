@@ -2,15 +2,41 @@
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
-const collectEmployees = function() {
+const collectEmployees = function(){}
   // TODO: Get user input to create and return an array of employee objects
-}
-const employess = [
-name: [antonio, ]
-]; 
+  const Antonio=
+  {
+  firstName:"Antonio",
+  lastName:"Hockman",
+  salary:50000
+  };
+  
+
+  const Danielle=
+  { 
+    firstName:"Danielle",
+    lastName:"Cassandra",
+    salary:45000
+  };
+
+  const Naomi=
+  { 
+    firstName:"Naomi",
+    lastName:"Yesena",
+    salary: 47000
+  };
+
+  const Felix=
+  {
+    firstName:"Felix",
+    lastName:"Malachi",
+    salary:55000
+  };
+
+ 
 
 // Display the average salary
-const displayAverageSalary = function(employeesArray) {
+function displayAverageSalary(employeesArray) {
   // TODO: Calculate and display the average salary
 }
 
