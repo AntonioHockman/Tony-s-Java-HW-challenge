@@ -2,37 +2,50 @@
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
+
+
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
-  const employees = [];
+  let theEmployees =[];
 
-  let addEmployee = true;
+  do {
+    const firstName = prompt ("Enter first name");
+    const lastName = prompt ("Enter last name");
+    const salary = prompt ("Enter salary");
 
-  while (addEmployee) {
-      const firstName = prompt("Enter the first name of the employee:");
-      const lastName = prompt("Enter the last name of the employee:");
-      const salaryInput = prompt("Enter the salary of the employee:");
-      const salary = isNaN(Number(salaryInput)) ? 0 : Number(salaryInput);
 
-      const employee = {
-          firstName: firstName,
-          lastName: lastName,
-          salary: salary
-      };
+    const employee = {
+      firstName: firstName,
+      lastName: lastName,
+      salary: salary
+    };
 
-      employees.push(employee);
-      const continueInput = prompt("Do you want to add another employee? (yes/no)");
-      addEmployee = continueInput.toLowerCase() === 'yes';
+    theEmployees.push(employee);
+
+    const yesNo = prompt ("Do you want to add another employee? (yes/no)");
+
+    if (yesNo.toLowerCase() === "yes") {
+      theEmployees.push(employee);
+  } else if (yesNo.toLowerCase() === "no") {
+      break;
+  } else {
+      alert("Please enter 'yes' or 'no'.");
   }
+} while (true);
 
-  return employees;
-};
+    return theEmployees;
+  };
 
+
+  
  
 
 // Display the average salary
 function displayAverageSalary(employeesArray) {
   // TODO: Calculate and display the average salary
+
+
+
   
 }
 
@@ -40,7 +53,7 @@ function displayAverageSalary(employeesArray) {
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
-  console.log(getRandomEmployee.collectEmployees[0]);
+ //console.log(getRandomEmployee.collectEmployees[0]);
 }
 
 /*
